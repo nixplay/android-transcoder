@@ -139,7 +139,7 @@ public class MediaTranscoderEngine {
         } catch (NumberFormatException e) {
             // skip
         }
-
+/*
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             String locationString = mediaMetadataRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_LOCATION);
             if (locationString != null) {
@@ -151,7 +151,7 @@ public class MediaTranscoderEngine {
                 }
             }
         }
-
+*/
         try {
             mDurationUs = Long.parseLong(mediaMetadataRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)) * 1000;
         } catch (NumberFormatException e) {
