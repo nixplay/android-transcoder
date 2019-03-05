@@ -3,20 +3,24 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.novoda:bintray-release:0.2.4'
+        classpath 'com.novoda:bintray-release:0.9'
     }
 }
 
 apply plugin: 'com.android.library'
-apply plugin: 'bintray-release'
+apply plugin: "com.novoda.bintray-release"
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '25.0.2'
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         minSdkVersion 18
-        targetSdkVersion 24
+        targetSdkVersion 28
+    }
+
+    lintOptions {
+        abortOnError false
     }
 
     buildTypes {
@@ -30,11 +34,13 @@ android {
 }
 
 publish {
+    userOrg = 'nixplay'
     groupId = 'net.ypresto.androidtranscoder'
     artifactId = 'android-transcoder'
-    version = '0.3.0'
+    desc = 'MP4 video transcode using Android MediaCodec API, pure Java (not LGPL nor patent issue!). Supports API >= 18.'
+    publishVersion = '0.3.1'
     licences = ['Apache-2.0']
-    website = 'https://github.com/ypresto/android-transcoder'
+    website = 'https://github.com/nixplay/android-transcoder'
     autoPublish = false
     dryRun = false
 }

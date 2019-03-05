@@ -4,3 +4,7 @@
 .DS_Store
 /build
 *.iml
+example/.classpath
+example/.settings/org.eclipse.buildship.core.prefs
+lib/.classpath
+lib/.settings/org.eclipse.buildship.core.prefs
