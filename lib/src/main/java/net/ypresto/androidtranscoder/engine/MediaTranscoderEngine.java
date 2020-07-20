@@ -116,6 +116,7 @@ public class MediaTranscoderEngine {
             setupTrackTranscoders(formatStrategy);
             runPipelines();
             mMuxer.stop();
+            Log.d("TestingThisBranch", "Here");
         } finally {
             try {
                 if (mVideoTrackTranscoder != null) {
