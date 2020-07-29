@@ -133,7 +133,7 @@ public class MediaTranscoderEngine {
             } catch (RuntimeException e) {
                 // Too fatal to make alive the app, because it may leak native resources.
                 //noinspection ThrowFromFinallyBlock
-                throw new Error("Could not shutdown extractor, codecs and muxer pipeline.", e);
+                throw new RuntimeException("Could not shutdown extractor, codecs and muxer pipeline.", e);
             }
             try {
                 if (mMuxer != null) {
